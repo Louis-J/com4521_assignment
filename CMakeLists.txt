@@ -26,36 +26,30 @@ endif()
 SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -g3 -ggdb")  # debug模式下 gdb相关选项
 SET(CMAKE_CXX_FLAGS_RELEASE "$ENV{CXXFLAGS} -O3") # release模式下 gdb相关选项
 
-SET(EXECUTABLE_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/bin") # 可执行文件输出目录
 
-include_directories("${PROJECT_SOURCE_DIR}/include") # 头文件包含目录
-link_directories("${PROJECT_SOURCE_DIR}/lib")
+if(true)# 64位编译
+    SET(EXECUTABLE_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/bin/64") # 可执行文件输出目录
+    include_directories("${PROJECT_SOURCE_DIR}/include") # 头文件包含目录
+    link_directories("${PROJECT_SOURCE_DIR}/lib/64")
+else()
+    SET(EXECUTABLE_OUTPUT_PATH "${PROJECT_SOURCE_DIR}/bin/32") # 可执行文件输出目录
+    include_directories("${PROJECT_SOURCE_DIR}/include") # 头文件包含目录
+    link_directories("${PROJECT_SOURCE_DIR}/lib/32")
+endif()
 
 AUX_SOURCE_DIRECTORY(NBody DIR_SRCS) # 添加源代码文件夹, 自动扫描所有文件
 
-link_libraries("freeglut")
-link_libraries("glew32")
 link_libraries("opengl32")
 link_libraries("glu32")
-link_libraries("glut")
-link_libraries("glut32")
+link_libraries("glew32")
+link_libraries("freeglut")
+# link_libraries("freeglut_static")
 
 add_executable(NBody  # 输出名为NBody的可执行文件
     ${DIR_SRCS}
 )
 
-# target_link_libraries( third_party_include
-# PRIVATE
-# ${Boost_SYSTEM_LIBRARY}
-# ${Boost_FILESYSTEM_LIBRARY}
-# )
 # SET(CMAKE_BUILD_TYPE "Debug")  # Debug模式 选项: Release Debug MinSizeRel RelWithDebInfo
 # add_definitions(-DDEBUG) # 相当于代码中 #define DEBUG
 # set(CMAKE_VERBOSE_MAKEFILE ON) # 开启调试 出现问题时开启
 # enable_testing() # 打开测试
-
-# 也可以这么写
-# add_executable(chess  # 输出名为chess的可执行文件
-#    ./src/main.cpp
-#    ./src/utils.cpp
-# )
