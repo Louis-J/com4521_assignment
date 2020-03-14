@@ -1,0 +1,30 @@
+[
+  {
+      "name": "GCC64",
+      "compilers": {
+          "C": "F:\\Program\\ProMaker\\CCPP\\Compiler\\mingw64\\bin\\gcc.exe",
+          "CXX": "F:\\Program\\ProMaker\\CCPP\\Compiler\\mingw64\\bin\\g++.exe"
+      }
+  },
+  {
+      "name": "GCC32",
+      "compilers": {
+          "C": "F:\\Program\\ProMaker\\CCPP\\Compiler\\mingw32\\bin\\gcc.exe",
+          "CXX": "F:\\Program\\ProMaker\\CCPP\\Compiler\\mingw32\\bin\\g++.exe"
+      }
+  },
+  {
+      "name": "Clang32",
+      "compilers": {
+          "C": "F:\\Program\\ProMaker\\CCPP\\Compiler\\LLVM32\\bin\\clang.exe",
+          "CXX": "F:\\Program\\ProMaker\\CCPP\\Compiler\\LLVM32\\bin\\clang++.exe"
+      }
+    },
+    {
+      "name": "Clang64",
+      "compilers": {
+          "C": "F:\\Program\\ProMaker\\CCPP\\Compiler\\LLVM64\\bin\\clang.exe",
+          "CXX": "F:\\Program\\ProMaker\\CCPP\\Compiler\\LLVM64\\bin\\clang++.exe"
+      }
+    }
+]

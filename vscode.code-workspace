@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"string_view": "cpp",
+			"string": "cpp",
+			"*.tcc": "cpp",
+			"vector": "cpp",
+			"unordered_map": "cpp",
+			"array": "cpp",
+			"bitset": "cpp",
+			"initializer_list": "cpp",
+			"utility": "cpp",
+			"deque": "cpp",
+			"list": "cpp",
+			"ostream": "cpp",
+			"chrono": "cpp",
+			"random": "cpp",
+			"limits": "cpp",
+			"*.ipp": "cpp",
+			"tuple": "cpp"
+		},
+		"C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
+		"cmake.cmakePath": "F:\\Program\\ProMaker\\CCPP\\Compiler\\cmake\\bin\\cmake.exe",
+		"cmake.configureSettings": {
+			"CMAKE_MAKE_PROGRAM": "F:/Program/ProMaker/CCPP/Compiler/mingw64/bin/mingw32-make.exe",
+			// "CMAKE_MAKE_PROGRAM": "F:\\Program\\ProMaker\\CCPP\\Compiler\\mingw64\\bin\\mingw32-make.exe",
+		},
+		"cmake.generator": "MinGW Makefiles",
+	}
+}
